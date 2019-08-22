@@ -1,0 +1,15 @@
+section {
+	margin:auto;
+}
+
+h1 {
+	margin-left: 50%;
+}
+
+.box {
+	margin-left: 20px !important;
+	margin-right: 20px !important;
+}
+.form-group{
+	margin-right: 50%;
+}
