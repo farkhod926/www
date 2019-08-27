@@ -22,15 +22,15 @@
               <div class="form-group">
                 <label for="UsersName">User</label>
                 <br>
-                <input type="text" name="name" value="<?=$users['name'];?>">
+                <input type="text" name="name" value="<?= $user['name'];?>" >
               </div>
               <div class="form-group">
                 <label for="UsersEmail">Email</label><br>
-                <input type="text" name="email">
+                <input type="text" name="email"value="<?= $user['email'];?>">
               </div>
               <div class="form-group">
                 <label for="UsersMessage">Message</label><br>
-                <textarea name="message"></textarea>
+                <textarea name="message" value="<?= $user['message'];?>"></textarea>
               </div>
               <div class="form-group">
                 <label for="UsersAvatar">Image</label><br>
