@@ -15,12 +15,15 @@
  <div class="box card mb-3">
   <div class="card-header">
     <i class="fas fa-users"></i>
-  Users Table Example</div>
+  Users Table Example
+    <a href="/users/logout.php" class="btn btn-success">Logout</a>
+    <a href="/index.php" class="btn btn-success">Main</a></div>
   <div class="card-body">
     <div class="table-responsive">
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
+            <th>ID</th>
             <th>Name</th>
             <th>Email</th>
             <th>Message</th>
@@ -30,6 +33,7 @@
         </thead>
         <tfoot>
           <tr>
+            <th>ID</th>
             <th>Name</th>
             <th>Email</th>
             <th>Message</th>
@@ -40,14 +44,18 @@
         <tbody>
           <?php foreach ($users as $key => $user):?> 
             <tr>
+              <td><?=$user['id'];?></td>
               <td><?=$user['name'];?></td>
               <td><?=$user['email'];?></td>
               <td><?=$user['message'];?></td>
               <td><img src="/users/uploads/<?= $user['image'];?>" width="50"></td>
-              <td><a href="/users/edit.php" class="fas fa-edit"></a>
+              <td><form method="POST" action="/users/edit.php">
+                <input type="hidden" name="id" value="<? echo $user['id'];?>">
+                <input type="submit" class="btn btn-info btn-sm" name="<? echo $user['id'];?>" value="edit">  
                 <button onclick="return confirm('are you sure?')" type="submit" class="delete" style="border:0; background-color: transparent;">
                   <i class="fas fa-times" ></i>
                 </button>
+                </form>
               </td>
             </tr>
           <?php endforeach;?>
