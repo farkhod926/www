@@ -18,19 +18,20 @@
             Users Table Example
           </div>
          <form action="/users/update.php" method="post" enctype="multipart/form-data">
+          <input type="hidden" name="id" value="<?php echo $id?>">
             <div class="box-body">
               <div class="form-group">
                 <label for="UsersName">User</label>
                 <br>
-                <input type="text" name="name" value="<?= $user['name'];?>" >
+                <input type="text" name="name" value="<?php echo $name;?>" >
               </div>
               <div class="form-group">
                 <label for="UsersEmail">Email</label><br>
-                <input type="text" name="email"value="<?= $user['email'];?>">
+                <input type="text" name="email"value="">
               </div>
               <div class="form-group">
                 <label for="UsersMessage">Message</label><br>
-                <textarea name="message" value="<?= $user['message'];?>"></textarea>
+                <textarea name="message" value=""></textarea>
               </div>
               <div class="form-group">
                 <label for="UsersAvatar">Image</label><br>

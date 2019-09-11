@@ -50,15 +50,8 @@
               <td><?=$user['message'];?></td>
               <td><img src="/users/uploads/<?= $user['image'];?>" width="50"></td>
               <td>
-                <form action="/users/edit.php" method="POST" style="display: inline-block;">
-                <input type="hidden" name="id" value="<?= $user['id'];?>">
-                <input type="submit" class="btn btn-info btn-sm"  value="Edit">
-                </form>
-                <form action="/users/delede.php" method="POST"style="display: inline-block;">  
-                <button onclick="return confirm('are you sure?')" type="submit" class="delete" style="border:0; background-color: transparent;">
-                  <i class="fas fa-times" ></i>
-                </button>
-               </form>
+                <a href="../view/edit.show.php?edit=<?php echo $user['id'];?>" class="fas fa-edit"></a>  
+                <a href="delete.php?delete<?php echo $user['id'];?>" class="fas fa-times" ></a> 
               </td>
             </tr>
           <?php endforeach;?>

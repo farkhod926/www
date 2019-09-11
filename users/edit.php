@@ -1,14 +1,15 @@
 <?php
-if(!empty($_POST['id'])){
+if(isset($_GET['edit'])){
 
-  $id = $_POST['id'];
+  $id = $_GET['edit'];
 
   $pdo = new PDO("mysql:host=localhost;dbname=www","root","");
+  $name = '';
   $statement = $pdo->prepare("SELECT name,email,message,image FROM users  WHERE id='$id'");
   $statement->execute();
   $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-  var_dump($result);
-  include "../view/edit.show.php";
+  $name = $result['name'];
+  header('location:../view/edit.show.php');
 }
 else 
 {
