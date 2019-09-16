@@ -50,7 +50,7 @@
               <td><?=$user['message'];?></td>
               <td><img src="/users/uploads/<?= $user['image'];?>" width="50"></td>
               <td>
-                <a href="../view/edit.show.php?edit=<?php echo $user['id'];?>" class="fas fa-edit"></a>  
+                <a href="../users/update.php?id=<?php echo $user['id'];?>" class="fas fa-edit"></a>  
                 <a href="delete.php?delete<?php echo $user['id'];?>" class="fas fa-times" ></a> 
               </td>
             </tr>
