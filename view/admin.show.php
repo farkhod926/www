@@ -17,7 +17,8 @@
     <i class="fas fa-users"></i>
   Users Table Example
     <a href="/users/logout.php" class="btn btn-success">Logout</a>
-    <a href="/index.php" class="btn btn-success">Main</a></div>
+    <a href="/index.php" class="btn btn-success">Main</a>
+    <a href="/users/create.php" class="btn btn-success">Add</a></div>
   <div class="card-body">
     <div class="table-responsive">
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -51,7 +52,7 @@
               <td><img src="/users/uploads/<?= $user['image'];?>" width="50"></td>
               <td>
                 <a href="../users/update.php?id=<?php echo $user['id'];?>" class="fas fa-edit"></a>  
-                <a href="delete.php?delete<?php echo $user['id'];?>" class="fas fa-times" ></a> 
+                <a href="../users/delete.php?delete=<?php echo $user['id'];?>" class="fas fa-times" ></a> 
               </td>
             </tr>
           <?php endforeach;?>
