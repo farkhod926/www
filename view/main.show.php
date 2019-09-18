@@ -27,7 +27,7 @@
                     <th>Name</th>
                     <th>Position</th>
                     <th>Office</th>
-                    <th>Age</th>
+                    <th>Avatar</th>
                   </tr>
                 </thead>
                 <tfoot>
@@ -35,7 +35,7 @@
                     <th>Name</th>
                     <th>Position</th>
                     <th>Office</th>
-                    <th>Age</th>
+                    <th>Avatar</th>
                   </tr>
                 </tfoot>
                 <tbody>
